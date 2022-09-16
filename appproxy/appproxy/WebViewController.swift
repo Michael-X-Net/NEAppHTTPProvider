@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import WebKit;
 
 class WebViewController: UIViewController {
 
-    @IBOutlet weak var wv: UIWebView!
+    @IBOutlet weak var wv: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        wv.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.google.com")!))
+//        wv.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.google.com")!))
+        wv.load(URLRequest(url: URL(string: "http://localhost:8085")!))
     }
 
     override func didReceiveMemoryWarning() {
